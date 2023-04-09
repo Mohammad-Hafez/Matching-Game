@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/Style.css">
+    <title>Matching Game</title>
+</head>
+
+<body>
+    <div id="loading">
+        <i class="fa fa-spinner fa-spin text-white fs-1"></i>
+    </div>
+    <section class="">
+        <div class="container pt-3 mx-auto">
+            <div class="sectionHeader d-flex align-items-center justify-content-between mb-2">
+                <div id="headerTitle">
+                    <h1>
+                        look and match :
+                    </h1>
+                </div>
+                <div id="headerIcons" class="d-flex align-items-center">
+                    <i class="fa-solid fa-question headerIcon rounded cursor-pointer me-2" id="helpIcon"></i>
+                    <i class="fa-solid fa-images headerIcon rounded cursor-pointer" id="previewIcon"></i>
+                </div>
+            </div>
+            <div class="content">
+                <div class="contentContainer p-4 bg-white">
+                    <div id="main" class=" flex-column justify-content-between h-100">
+                        <div class="images d-flex align-items-stretch row g-2 ">
+                            <div class="item  col-3 position-relative">
+                                <div class="selectOverlay" data-id="Scissors"></div>
+                                <div class="innerImg d-flex flex-column justify-content-between text-center"
+                                    data-id="Scissors">
+                                    <img src="img/p19ex21_1.png" class="w-75 mx-auto cursor-pointer" alt="">
+                                    <i class="fa-sharp fa-regular fa-circle cursor-pointer selectCircle"></i>
+                                </div>
+                            </div>
+                            <div class="item  col-3 position-relative">
+                                <div class="selectOverlay" data-id="Board"></div>
+                                <div class="innerImg d-flex flex-column justify-content-between text-center"
+                                    data-id="Board">
+                                    <img src="img/p19ex21_2.png" class="w-75 mx-auto cursor-pointer" alt="">
+                                    <i class="fa-sharp fa-regular fa-circle cursor-pointer selectCircle"></i>
+                                </div>
+                            </div>
+                            <div class="item  col-3 position-relative">
+                                <div class="selectOverlay" data-id="Chair"></div>
+                                <div class="innerImg d-flex flex-column justify-content-between text-center"
+                                    data-id="Chair">
+                                    <img src="img/p19ex21_3.png" class="w-75 mx-auto cursor-pointer" alt="">
+                                    <i class="fa-sharp fa-regular fa-circle cursor-pointer selectCircle"></i>
+                                </div>
+                            </div>
+                            <div class="item  col-3 position-relative">
+                                <div class="selectOverlay" data-id="Window"></div>
+                                <div class="innerImg d-flex flex-column justify-content-between text-center"
+                                    data-id="Window">
+                                    <img src="img/p19ex21_4.png" class="w-75 mx-auto cursor-pointer" alt="">
+                                    <i class="fa-sharp fa-regular fa-circle cursor-pointer selectCircle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="titles d-flex align-items-center row g-2">
+                            <div class="item col-3 position-relative">
+                                <div class="titleOverlay" data-id="Chair"></div>
+                                    <div class="innerTitle text-center d-flex flex-column justify-content-center " data-id="Chair">
+                                    <i class="fa-sharp fa-regular fa-circle cursor-pointer selectCircle"></i>
+                                    <h4 class="cursor-pointer">
+                                        chair
+                                    </h4>
+                                    <img src="img/crossMark.png" class="mx-auto"  alt="">
+                                </div>
+                            </div>
+                            <div class="item col-3 position-relative">
+                                <div class="titleOverlay" data-id="Window"></div>
+                                    <div class="innerTitle text-center d-flex flex-column justify-content-center " data-id="Window">
+                                    <i class=" fa-sharp fa-regular fa-circle cursor-pointer selectCircle"></i>
+                                    <h4 class="cursor-pointer">
+                                        Window
+                                    </h4>
+                                    <img src="img/crossMark.png" class="mx-auto"  alt="">
+
+                                </div>
+                            </div>
+                            <div class="item col-3 position-relative">
+                                <div class="titleOverlay" data-id="Scissors"></div>
+                                    <div class="innerTitle text-center d-flex flex-column justify-content-center " data-id="Scissors">
+                                    <i class="fa-sharp fa-regular fa-circle cursor-pointer selectCircle"></i>
+                                    <h4 class="cursor-pointer">
+                                        Scissors
+                                    </h4>
+                                    <img src="img/crossMark.png" class="mx-auto"  alt="">
+
+                                </div>
+                            </div>
+                            <div class="item col-3 position-relative">
+                                <div class="titleOverlay" data-id="Board"></div>
+                                    <div class="innerTitle text-center d-flex flex-column justify-content-center " data-id="Board">
+                                    <i class="fa-sharp fa-regular fa-circle cursor-pointer selectCircle"></i>
+                                    <h4 class="cursor-pointer">
+                                        Board
+                                    </h4>
+                                    <img src="img/crossMark.png" class="mx-auto"  alt="">
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <svg style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
+                            <!-- <polyline class="line line1 d-inline bg-black" style="fill:none;stroke:black;stroke-width:3;z-index:99" points="85,1 783,483"></polyline> -->
+                        </svg>
+                    </div>
+                    <div class="previewOverlay  p-3 h-100">
+                            <i class="fa-solid fa-circle-xmark closeBtn" id="close-preview-btn"></i>
+                            <div class="innerContent rounded">
+                                <i class="fa-solid fa-images fs-1"></i>
+                                <h1>Dummy Image</h1>
+                        </div>
+                    </div>
+                    <div class="helpOverlay p-4 ">
+                            <i class="fa-solid fa-circle-xmark closeBtn" id="close-help-btn"></i>
+                            <p>
+                                help center goes here
+                            </p>
+                    </div>
+                </div>
+            </div>
+            <div id="footer" class="py-4 d-flex align-items-center justify-content-around">
+                <i class="fa-solid fa-eye rounded cursor-pointer" id="showAnswers"></i>
+                <i class="fa-solid fa-arrows-rotate rounded cursor-pointer" id="reDo"></i>
+            </div>
+            <div class="overlay"></div>
+
+        </div>
+    </section>
+    <!-- <div class="overlay vh-100 w-100"> </div> -->
+</body>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery-3.6.4.min.js"></script>
+<script src="js/index.js"></script>
+
+</html>
